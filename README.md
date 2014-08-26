@@ -24,7 +24,7 @@ lowest common denominator in most modern puppet set ups.
 - A Scientific Linux 6.5 machine
 
 ##Validating puppet
-vagrant ssh ${machine} -c "puppet agent -t"
+vagrant ssh ${machine} -c "sudo puppet agent -t"
 
 ##More Info
 
