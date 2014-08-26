@@ -23,7 +23,7 @@ class simple_puppetmaster {
     group  => 'puppet', 
   } ->
   file { '/usr/share/puppet/rack/puppetmaster/config.ru': 
-    source  => 'puppet:///modules/simple-puppetmaster/config.ru', 
+    source  => 'puppet:///modules/simple_puppetmaster/config.ru', 
     owner   => 'puppet', 
     require => File['/usr/share/puppet/rack/puppetmaster'], 
     notify  => Service['httpd'], 
@@ -31,7 +31,7 @@ class simple_puppetmaster {
 
   # Apache config
   file { '/etc/httpd/conf.d/puppetmaster.conf':
-    source => 'puppet:///modules/simple-puppetmaster/puppetmaster.conf',
+    source => 'puppet:///modules/simple_puppetmaster/puppetmaster.conf',
     notify => Service['httpd'],
   }
 }
