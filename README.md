@@ -23,12 +23,18 @@ lowest common denominator in most modern puppet set ups.
 - Centos 6.5 and Centos 7.0 machines
 - A Scientific Linux 6.5 machine
 
+Will fold in Fedora Core and Debian Wheezy at some point.  OpenSUSE if someone asks.
+
 ##Validating puppet
 vagrant ssh ${machine} -c "sudo puppet agent -t"
 
 ##More Info
 
-DNS is managed with bind via puppet/modules/simple_dns/files/db.example.com and reverse dns is managed via puppet/modules/simple_dns/files/db.203.0.113
+DNS is managed with bind via **puppet/modules/simple_dns/files/db.example.com** and reverse dns is managed via **puppet/modules/simple_dns/files/db.203.0.113**.  Normal DNS caveats apply:
+- Increment the serial
+- Keep reverse and forward in sync
+- Keep it copacetic with the Vagrantfile
+- If it's not working.  Increment the serial.
 
 By default the puppetmaster forwards DNS requests through the host over the nat connection.
 
