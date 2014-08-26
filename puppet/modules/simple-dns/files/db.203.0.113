@@ -1,0 +1,15 @@
+$ORIGIN 113.0.203.IN-ADDR.ARPA.
+$TTL 36000
+@             IN      SOA   puppet.example.com. hostmaster.example.com. (
+              2014082600
+              3600
+              900
+              864000
+              86400 )
+              IN      NS    puppet.example.com.
+2            IN      PTR   puppet.example.com.
+3            IN      PTR   centos6.example.com.
+4            IN      PTR   centos7.example.com.
+5            IN      PTR   precise.example.com.
+6            IN      PTR   trusty.example.com.
+7            IN      PTR   scientific.example.com.

@@ -1,0 +1,15 @@
+$TTL 36000
+@             IN      SOA   puppet.example.com. hostmaster.example.com. (
+              2014082600
+              3600
+              900
+              864000
+              86400 )
+              IN      NS    puppet.example.com.
+
+puppet        IN      A     203.0.113.2
+centos6       IN      A     203.0.113.3
+centos7	      IN      A	    204.0.113.4
+precise       IN      A     204.0.113.5
+trusty        IN      A     203.0.113.6
+scientific    IN      A     203.0.113.7
