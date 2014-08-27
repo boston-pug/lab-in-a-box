@@ -8,6 +8,11 @@ lowest common denominator in most modern puppet set ups.
 ##Instructions
 - Download and install Vagrant - http://www.vagrantup.com/downloads.html
 - Download and install VirtualBox - https://www.virtualbox.org/wiki/Downloads
+- On windows
+  - Be sure you have and use powershell
+  - For vagrant ssh install Github for Windows - https://windows.github.com/
+  - Add vagrant bin directory to your path - likely C:\Program Files\HashiCorp\Vagrant\bin
+  - Add git bin path to your path or launch git shell
 - Download or clone this repo
 - Navigate to where you downloaded or cloned this repo
 - Open the Vagrantfile and:
