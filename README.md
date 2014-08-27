@@ -3,14 +3,14 @@ lab-in-a-box
 
 A minimalist multi-machine puppet lab in vagrant. Meant to be a starting point
 for your own labs.  The puppetmaster is currently Centos6.5 as this is the 
-lowest common denominator in most modern puppet set ups.
+lowest common denominator in most modern puppet set ups (ruby 1.8.7 - yada yada).
 
 ##Instructions
 - Download and install Vagrant - http://www.vagrantup.com/downloads.html
 - Download and install VirtualBox - https://www.virtualbox.org/wiki/Downloads
 - On windows
   - Be sure you have and use powershell
-  - For vagrant ssh install Github for Windows - https://windows.github.com/
+  - For vagrant ssh easiest thing is to install Github for Windows - https://windows.github.com/
   - Add vagrant bin directory to your path - likely C:\Program Files\HashiCorp\Vagrant\bin
   - Add git bin path to your path or launch git shell
 - Download or clone this repo
@@ -28,6 +28,8 @@ lowest common denominator in most modern puppet set ups.
 - Centos 6.5 and Centos 7.0 machines
 - A Scientific Linux 6.5 machine
 
+No plugins are required for any of this to work so it should be truly cross-platform.  Downside is you need 2 boxes and a 1GB Disk / 1GB RAM footprint.
+
 Will fold in Fedora Core and Debian Wheezy at some point.  OpenSUSE if someone asks.
 
 ##Validating puppet
@@ -39,7 +41,8 @@ DNS is managed with bind via **puppet/modules/simple_dns/files/db.example.com** 
 - Increment the serial
 - Keep reverse and forward in sync
 - Keep it copacetic with the Vagrantfile
-- If it's not working.  Increment the serial.
+- If it's not working increment the serial.
+- Its bind.
 
 By default the puppetmaster forwards DNS requests through the host over the nat connection.
 
@@ -50,3 +53,5 @@ For lots of detail on setting up a complete sandbox see:
 - http://www.cammorato.com/2014/05/dissecting-the-vagrantfile/
 
 For the packer templates used for the machines see: https://github.com/boston-pug/packer-templates
+
+Boxes are hosted at Northeastern (www.ccs.neu.edu).  Beat Nick Cammorato about the head and shoulders if you have issues downloading them on anything but Windows.
