@@ -5,6 +5,8 @@ A minimalist multi-machine puppet lab in vagrant. Meant to be a starting point
 for your own labs.  The puppetmaster is currently Centos6.5 as this is the 
 lowest common denominator in most modern puppet set ups (ruby 1.8.7 - yada yada).
 
+Certs are distributed with this, you should know if you care about that.
+
 ##Instructions
 - Download and install Vagrant - http://www.vagrantup.com/downloads.html
 - Download and install VirtualBox - https://www.virtualbox.org/wiki/Downloads
@@ -28,7 +30,7 @@ lowest common denominator in most modern puppet set ups (ruby 1.8.7 - yada yada)
 - Centos 6.5 and Centos 7.0 machines
 - A Scientific Linux 6.5 machine
 
-No plugins are required for any of this to work so it should be truly cross-platform.  Downside is you need 2 boxes and a 1GB Disk / 1GB RAM footprint.
+No plugins are required for any of this to work so it should be truly cross-platform.  Downside is you need 2 boxes and a 1GB Disk / 1GB RAM footprint(and this is cutting it pretty tight).
 
 Will fold in Fedora Core and Debian Wheezy at some point.  OpenSUSE if someone asks.
 
@@ -42,7 +44,6 @@ DNS is managed with bind via **puppet/modules/simple_dns/files/db.example.com** 
 - Keep reverse and forward in sync
 - Keep it copacetic with the Vagrantfile
 - If it's not working increment the serial.
-- Its bind.
 
 By default the puppetmaster forwards DNS requests through the host over the nat connection.
 
@@ -52,6 +53,10 @@ For lots of detail on setting up a complete sandbox see:
 - http://www.cammorato.com/2014/03/setting-up-your-sandbox/
 - http://www.cammorato.com/2014/05/dissecting-the-vagrantfile/
 
+Vagrant docs are also always helpful, especially for modifying vbox params like memory.
+
+And you can always yell at PUG members.
+
 For the packer templates used for the machines see: https://github.com/boston-pug/packer-templates
 
-Boxes are hosted at Northeastern (www.ccs.neu.edu).  Beat Nick Cammorato about the head and shoulders if you have issues downloading them on anything but Windows.
+Boxes are hosted at Northeastern (www.ccs.neu.edu).  Beat Nick Cammorato(@cammoraton) about the head and shoulders if you have issues downloading them on anything but Windows.
